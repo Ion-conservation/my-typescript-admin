@@ -1,4 +1,5 @@
 # my-typescript-admin
+## 该项目基于vue+typescript，如不需要typescript，请新建项目
 
 ## Project setup
 ```
