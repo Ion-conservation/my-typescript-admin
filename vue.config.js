@@ -1,3 +1,5 @@
+// const path = require('path')
+
 module.exports = {
     chainWebpack: (config) => {
         if (process.env.NODE_ENV == 'development') {
@@ -11,5 +13,14 @@ module.exports = {
                 return args
             })
         }
+    },
+
+    pluginOptions: {
+      'style-resources-loader': {
+        preProcessor: 'less',
+        patterns: [
+            'D:\\Project\\my-typescript-admin\\path\\to\\less\\variables\\*.less'
+        ]
+      }
     }
 }
