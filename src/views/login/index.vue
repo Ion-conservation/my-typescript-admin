@@ -16,6 +16,7 @@
       <a-form-item>
         <a-checkbox>Remember me</a-checkbox>
         <a href="">Forgot password</a>
+        <a href="">{{$t('message')}}</a>
         <a-button
           type="primary"
           html-type="submit"

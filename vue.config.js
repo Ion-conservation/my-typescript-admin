@@ -19,8 +19,14 @@ module.exports = {
       'style-resources-loader': {
         preProcessor: 'less',
         patterns: [
-            'D:\\Project\\my-typescript-admin\\path\\to\\less\\variables\\*.less'
+          'D:\\Project\\my-typescript-admin\\path\\to\\less\\variables\\*.less'
         ]
+      },
+      i18n: {
+        locale: 'zh',
+        fallbackLocale: 'en',
+        localeDir: 'locales',
+        enableInSFC: true
       }
     }
 }
