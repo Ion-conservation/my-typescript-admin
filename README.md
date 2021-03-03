@@ -28,3 +28,13 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 cnpm i less less-loader -D
 vue add style-resources-loader 选less
 
+2021-03-03
+动态路由生成
+路由白名单
+nodejs mock
+
+### express
+1.  cnpm install @types/express --save
+2.  cnpm install @types/body-parser --save
+3.  cnpm install @types/cors --save
+4.  cnpm install ts-node-dev --dev

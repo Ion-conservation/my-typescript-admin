@@ -24,18 +24,12 @@
         block
         >登录</a-button
       >
-      <a-form-item>
-        <!-- <a-checkbox>Remember me</a-checkbox>
-        <a href="">Forgot password</a>
-
-       
-        <a href="">register now!</a> -->
-      </a-form-item>
     </a-form>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import "@/icons/svgjs/language";
 export default {
   data() {
@@ -47,8 +41,12 @@ export default {
     this.form = this.$form.createForm(this, { name: "normal_login" });
   },
   methods: {
-    handleSubmit() {
-      console.log("submit");
+    handleSubmit(e) {
+      e.preventDefault()
+      console.log('handleSubmit')
+      axios.get('http://localhost:8081/login').then(res => {
+        console.log('res', res)
+      })
     },
   },
 };

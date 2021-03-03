@@ -18,6 +18,9 @@ import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css';
 Vue.use(Antd)
 
+/* lodash */
+import * as _ from 'lodash'
+
 /* vue add router */
 import router from './router'
 
