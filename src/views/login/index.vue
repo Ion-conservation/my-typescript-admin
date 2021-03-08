@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 import "@/icons/svgjs/language";
 export default {
   data() {
@@ -42,11 +42,19 @@ export default {
   },
   methods: {
     handleSubmit(e) {
-      e.preventDefault()
-      console.log('handleSubmit')
-      axios.get('http://localhost:8081/login').then(res => {
-        console.log('res', res)
-      })
+      e.preventDefault();
+      // const data = {
+      //   params: {
+      //     username: "zouzou",
+      //     password: "bilibili",
+      //   },
+      // };
+      // axios.post("http://localhost:8081/login", data).then((res) => {
+      //   console.log("res", res);
+      // });
+      axios.get("http://localhost:8081/login/name/zou/age/18").then((res) => {
+        console.log("res", res);
+      });
     },
   },
 };
