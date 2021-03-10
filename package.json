@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "concurrently \"npm run mock\" \"vue-cli-service serve\"",
+    "serve": "concurrently \"npm:mock\" \"vue-cli-service serve\"",
     "build": "vue-cli-service build",
+    "buildDev": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
     "staging": "vue-cli-service build --mode staging",
