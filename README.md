@@ -38,3 +38,9 @@ nodejs mock
 2.  cnpm install @types/body-parser --save
 3.  cnpm install @types/cors --save
 4.  cnpm install ts-node-dev --dev
+
+
+2021-3-22
+完成头部导航栏
+完成content布局
+完成footer
