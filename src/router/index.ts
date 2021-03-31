@@ -39,6 +39,11 @@ const routes: Array<RouteConfig> = [
     path: '/jsx',
     name: 'jsx',
     component: () => import('@/views/jsx/index.vue')
+  },
+  {
+    path: '/directive',
+    name: 'directive',
+    component: () => import('@/views/directive/index.vue')
   }
 ]
 
