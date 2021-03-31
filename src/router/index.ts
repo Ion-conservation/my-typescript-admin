@@ -20,18 +20,20 @@ const routes: Array<RouteConfig> = [
     component: Login
   },
   {
-
     path: '/slot',
     name: 'slot',
     component: () => import('@/views/slot/index.vue')
 
   },
   {
-
     path: '/render',
     name: 'render',
     component: () => import('@/views/render/index.vue')
-
+  },
+  {
+    path: '/updateProps',
+    name: 'updateProps',
+    component: () => import('@/views/updateProps/index.vue')
   }
 ]
 
