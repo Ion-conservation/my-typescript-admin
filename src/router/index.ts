@@ -9,13 +9,30 @@ const routes: Array<RouteConfig> = [
   {
     path: '/',
     name: 'Portal',
-    component: Portal
+    component: Portal,
+    children: [
+
+    ]
   },
   {
     path: '/login',
     name: 'Login',
     component: Login
   },
+  {
+
+    path: '/slot',
+    name: 'slot',
+    component: () => import('@/views/slot/index.vue')
+
+  },
+  {
+
+    path: '/render',
+    name: 'render',
+    component: () => import('@/views/render/index.vue')
+
+  }
 ]
 
 const router = new VueRouter({
