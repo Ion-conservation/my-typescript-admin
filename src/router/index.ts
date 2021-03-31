@@ -34,6 +34,11 @@ const routes: Array<RouteConfig> = [
     path: '/updateProps',
     name: 'updateProps',
     component: () => import('@/views/updateProps/index.vue')
+  },
+  {
+    path: '/jsx',
+    name: 'jsx',
+    component: () => import('@/views/jsx/index.vue')
   }
 ]
 
