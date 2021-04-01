@@ -10,7 +10,7 @@ module.exports = {
             })
         } else {
             config.plugin('html').tap(args => {
-                args[0].title = 'title else'
+                args[0].title = 'old-guy'
                 return args
             })
         }
