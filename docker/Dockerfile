@@ -2,8 +2,8 @@
 FROM node:lts-alpine as build
 ADD [".","/src"]
 WORKDIR /src
-RUN npm install --registry https://registry.npm.taobao.org 
-RUN npm run build 
+RUN npm install --registry https://registry.npm.taobao.org
+RUN npm run build
 
 # 部署
 FROM nginx:stable
