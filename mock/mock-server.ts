@@ -1,7 +1,7 @@
 /* 基于node.js的web 开发框架 */
 // import express from 'express'
 const express = require('express')
-import { Response, Request } from 'express'
+import { Response, } from 'express'
 
 /* 解析中间件 对传入的请求体进行解析 */
 // import bodyParser from 'body-parser'
@@ -19,8 +19,8 @@ app.use(cors())
 //     extended: false
 // }))
 
-app.get('/login', (req: Response, res: Request) => {
-    console.log('res')
+app.get('/login', (req: Request, res: Response) => {
+    res.send(JSON.stringify({ code: 800, data: null, msg: "登录成功" }))
 })
 
 app.listen(port, () => {
