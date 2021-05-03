@@ -31,29 +31,6 @@
   </div>
 </template>
 
-<<<<<<< HEAD
-<script>
-import axios from "axios";
-import "@/icons/svgjs/language";
-export default {
-  data() {
-    return {
-      form: {},
-    };
-  },
-  beforeCreate() {
-    this.form = this.$form.createForm(this, { name: "normal_login" });
-  },
-  methods: {
-    handleSubmit(e) {
-      e.preventDefault();
-      axios.get("http://localhost:8081/login").then((res) => {
-        console.log("res", res);
-      });
-    },
-  },
-};
-=======
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
@@ -112,7 +89,6 @@ export default class Login extends Vue {
     });
   }
 }
->>>>>>> f1ed68a79ef0af7616f9031280ec482b5c14ab64
 </script>
 <style lang="less" scoped>
 .login-container {
