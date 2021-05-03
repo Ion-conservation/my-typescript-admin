@@ -4,7 +4,7 @@ import App from './App.vue'
 /* normalize.css */
 import 'normalize.css/normalize.css'
 
-/* 全局样式 */ 
+/* 全局样式 */
 import '@/style/index.less'
 
 /* vue-svgicon */
