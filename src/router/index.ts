@@ -2,17 +2,15 @@ import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Login from '@/views/login/index.vue'
 import Portal from '@/views/portal/index.vue'
+import Layout from '@/components/Layout/index.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/',
+    path: '/portal',
     name: 'Portal',
     component: Portal,
-    children: [
-
-    ]
   },
   {
     path: '/login',
@@ -44,6 +42,18 @@ const routes: Array<RouteConfig> = [
     path: '/directive',
     name: 'directive',
     component: () => import('@/views/directive/index.vue')
+  },
+  {
+    path: '/',
+    name: 'home',
+    component: Layout,
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import('@/views/home/index.vue')
+      }
+    ]
   }
 ]
 
