@@ -56,16 +56,6 @@ export default class Login extends Vue {
   };
 
   private handleSubmit(e: any): void {
-    // this.$refs.loginForm.validate((err, values) => {
-    //   if (!err) {
-    //     axios.get('http://localhost:8081/login').then((res: any) => {
-    //       if (res.data.code === 800) {
-    //         this.$message.success(res.data.msg);
-    //         this.$router.push({ path: '/' });
-    //       }
-    //     });
-    //   }
-    // });
     (this.$refs.loginForm as any).validate((valid: boolean) => {
       if (valid) {
         axios
@@ -77,7 +67,7 @@ export default class Login extends Vue {
           .then((res: any) => {
             if (res.data.code === 800) {
               this.$message.success(res.data.msg);
-              this.$router.push({ path: '/' });
+              this.$router.push({ path: '/portal' });
             } else {
               this.$message.error(res.data.msg);
             }

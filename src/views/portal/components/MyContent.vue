@@ -1,22 +1,14 @@
 <template>
-  <a-card style="height: 100%; text-align: left" :bodyStyle="{height: '100%'}">
-    <a-row :gutter="16" style="height: 100%;">
-      <a-col :span="16" style="height: 100%;">
-        <a-row  :gutter="16" style="margin-bottom: 10px;">
-          <a-col :span="12" style="height: 100%;">
-            <a-carousel autoplay arrows style="height: 100%;">
-              <div
-                slot="prevArrow"
-                class="custom-slick-arrow"
-                style="left: 10px; zindex: 1"
-              >
+  <a-card style="height: 100%; text-align: left" :bodyStyle="{ height: '100%' }">
+    <a-row :gutter="16" style="height: 100%">
+      <a-col :span="16" style="height: 100%">
+        <a-row :gutter="16" style="margin-bottom: 10px">
+          <a-col :span="12" style="height: 100%">
+            <a-carousel autoplay arrows style="height: 100%">
+              <div slot="prevArrow" class="custom-slick-arrow" style="left: 10px; zindex: 1">
                 <a-icon type="left-circle" />
               </div>
-              <div
-                slot="nextArrow"
-                class="custom-slick-arrow"
-                style="right: 10px"
-              >
+              <div slot="nextArrow" class="custom-slick-arrow" style="right: 10px">
                 <a-icon type="right-circle" />
               </div>
               <div><h3>1</h3></div>
@@ -26,7 +18,7 @@
             </a-carousel>
           </a-col>
           <a-col :span="12">
-            <a-card title="我的计划" style="height: 300px" :bodyStyle="{ paddingLeft: '0px', }">
+            <a-card title="我的计划" style="height: 300px" :bodyStyle="{ paddingLeft: '0px' }">
               <ul>
                 <li>新闻1</li>
                 <li>新闻1</li>
@@ -36,7 +28,7 @@
             </a-card>
           </a-col>
         </a-row>
-        <a-row :gutter="16" style="margin-bottom: 10px;height: calc((100% - 300px) /2)">
+        <a-row :gutter="16" style="margin-bottom: 10px; height: calc((100% - 300px) / 2)">
           <a-col :span="12" style="height: 100%">
             <a-card title="我的待办" style="height: 100%" :bodyStyle="{ paddingLeft: '0px' }">
               <ul>
@@ -58,9 +50,13 @@
             </a-card>
           </a-col>
         </a-row>
-        <a-row :gutter="16" style="margin-bottom: 10px;height: calc((100% - 300px) /2)">
+        <a-row :gutter="16" style="margin-bottom: 10px; height: calc((100% - 300px) / 2)">
           <a-col :span="12" style="height: 100%">
-            <a-card title="我的见闻" style="height: 100%" :bodyStyle="{ paddingLeft: '0px', height: '100%' }">
+            <a-card
+              title="我的见闻"
+              style="height: 100%"
+              :bodyStyle="{ paddingLeft: '0px', height: '100%' }"
+            >
               <ul>
                 <li>新闻1</li>
                 <li>新闻1</li>
@@ -81,62 +77,14 @@
           </a-col>
         </a-row>
       </a-col>
-      <a-col :span="8" style="height: 100%;">
+      <a-col :span="8" style="height: 100%">
         <a-card title="应用入口">
-          <a-card-grid style="width: 25%; text-align: center">HTML</a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">CSS</a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center"
-            >Javascript</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center">Vue</a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center; height: 100%"
-            >Vue CLI</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Vue Router</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center">Vuex</a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center"
-            >Element ui</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Ant Design Vue</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >React</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Webpack</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Docker</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >阿里云</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Nodejs</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Webpack</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Linux</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Nginx</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >ECMA6</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Momentjs</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Lodash</a-card-grid
-          >
-          <a-card-grid style="width: 25%; text-align: center"
-            >Nginx</a-card-grid
+          <a-card-grid
+            v-for="entry in entrys"
+            :key="entry.url"
+            class="entry-style"
+            @click="handleEntryClick(entry.url)"
+            >{{ entry.label }}</a-card-grid
           >
         </a-card>
       </a-col>
@@ -144,8 +92,29 @@
   </a-card>
 </template>
 
-<script>
-export default {};
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+interface Entry {
+  label: string;
+  url?: string;
+}
+
+@Component
+export default class MyContent extends Vue {
+  private entrys: Array<Entry> = [
+    {
+      label: '后台',
+      url: '/home',
+    },
+  ];
+
+  private handleEntryClick(url: string): void {
+    if (url) {
+      this.$router.push(url);
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -159,5 +128,9 @@ export default {};
 
 .ant-carousel >>> .slick-slide h3 {
   color: #fff;
+}
+.entry-style {
+  width: 25%;
+  text-align: center;
 }
 </style>
