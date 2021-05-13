@@ -6,20 +6,17 @@
     <a-layout-content class="content">
       <my-content></my-content>
     </a-layout-content>
-    <beian-footer />
   </a-layout>
 </template>
 
 <script>
 import MyHeader from "./components/MyHeader";
 import MyContent from "./components/MyContent";
-import BeianFooter from "@/components/BeianFooter";
 
 export default {
   components: {
     MyHeader,
     MyContent,
-    BeianFooter,
   },
 };
 </script>
