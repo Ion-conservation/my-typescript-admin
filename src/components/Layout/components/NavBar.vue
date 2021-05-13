@@ -1,12 +1,7 @@
 <template>
   <a-row style="height: 100%">
     <a-col :span="8" style="display: flex; align-items: center; height: 100%">
-      <!-- <a-icon
-        :type="isCollapse ? 'menu-unfold' : 'menu-fold'"
-        :style="{ fontSize: '28px', color: '#fff', cursor: 'pointer', marginRight: '10px' }"
-        @click.native="isCollapse = !isCollapse"
-      /> -->
-      <img :src="logo" alt="" height="28px" />
+      <img :src="logo" alt="" height="28px" style="cursor: pointer" @click="$router.push('/home')" />
     </a-col>
     <a-col :span="16"></a-col>
   </a-row>
@@ -24,9 +19,7 @@ export default Vue.extend({
   },
   computed: {},
   methods: {
-    handleClick() {
-      this.isCollapse = !this.isCollapse;
-    },
+
   },
 });
 </script>

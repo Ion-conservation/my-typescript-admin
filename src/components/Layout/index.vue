@@ -1,5 +1,5 @@
 <template>
-  <a-layout >
+  <a-layout>
     <a-layout-header :style="{ backgroundColor: '#4898ea' }">
       <nav-bar />
     </a-layout-header>
@@ -8,12 +8,13 @@
         <side-bar />
       </a-layout-sider>
       <a-layout>
-        <a-layout-content>
-          <router-view />
+        <a-layout-content :style="{margin: '5px'}">
+          <a-card>
+            <router-view />
+          </a-card>
         </a-layout-content>
       </a-layout>
     </a-layout>
-
   </a-layout>
 </template>
 <script lang="ts">
