@@ -6,7 +6,7 @@
 </template>
 
 <script >
-import BeianFooter from '@/components/BeianFooter.vue';
+import BeianFooter from '@/components/BeianFooter/index.vue';
 
 export default {
   components: { BeianFooter },

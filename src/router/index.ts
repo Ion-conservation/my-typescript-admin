@@ -52,7 +52,12 @@ const routes: Array<RouteConfig> = [
         path: '/home',
         name: 'home',
         component: () => import('@/views/home/index.vue')
-      }
+      },
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/dashboard/index.vue')
+      },
     ]
   }
 ]

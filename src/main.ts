@@ -10,7 +10,9 @@ import '@/style/index.less'
 /* vue-svgicon */
 import VueSvgIcon from 'vue-svgicon'
 Vue.use(VueSvgIcon, {
-  tagName: "svg-icon"
+  tagName: "svg-icon",
+  defaultWidth: '1em',
+  defaultHeight: '1em'
 })
 
 /* ant-design-vue */

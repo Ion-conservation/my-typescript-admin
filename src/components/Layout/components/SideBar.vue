@@ -1,7 +1,10 @@
 <template>
-  <a-menu  mode="vertical" @click="handleClick">
+  <a-menu mode="vertical" @click="handleClick">
+    <a-menu-item key="/home">首页</a-menu-item>
+    <a-menu-item key="/dashboard">数据大屏</a-menu-item>
     <a-sub-menu key="sub1" @titleClick="titleClick">
       <span slot="title"><a-icon type="mail" /><span>Navigation One</span></span>
+
       <a-menu-item-group key="g1">
         <template slot="title"> <a-icon type="qq" /><span>Item 1</span> </template>
         <a-menu-item key="1"> Option 1 </a-menu-item>
@@ -45,8 +48,8 @@ export default {
     },
   },
   methods: {
-    handleClick(e) {
-      console.log('click', e);
+    handleClick({ key }) {
+      key && this.$router.push(key);
     },
     titleClick(e) {
       console.log('titleClick', e);
