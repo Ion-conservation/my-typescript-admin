@@ -1,12 +1,10 @@
 <template>
   <div id="app">
     <router-view id="main-container" />
-    <beian-footer />
   </div>
 </template>
 
 <script >
-import BeianFooter from '@/components/BeianFooter.vue';
 
 export default {
   components: { BeianFooter },
