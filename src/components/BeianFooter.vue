@@ -8,7 +8,7 @@
       <p>粤公网安备 44060402002080号</p>
     </a>
     <a target="_blank" href="https://beian.miit.gov.cn">
-      <p>粤ICP备2021039208号-1</p>
+      <p>粤ICP备2021039208号</p>
     </a>
   </a-layout-footer>
 </template>
